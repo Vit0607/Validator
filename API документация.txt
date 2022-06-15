@@ -1,7 +1,25 @@
-API-документация к компоненту Validator.
+API-ДОКУМЕНТАЦИЯ К КОМПОНЕНТУ VALIDATOR
+
+Подключение:
+
+require_once('Validator.php');
 
 Экземпляр класса Validator создается без конструктора:
 
 $validator = new Validator();
 
-Методы компонента проверяют, являются ли данные электронной почтой, номером телефона, числом или строкой.
+Компонент имеет 4 метода, которые проверяют, являются ли данные электронной почтой, номером телефона, числом или строкой:
+
+isEmail($email);
+isPhone($phone);
+isInt($int);
+isString($str).
+
+Использование:
+
+$validator->isEmail('test@test.com');
+$validator->isPhone('77777777777');
+$validator->isInt('5');
+$validator->isString('some string');
+
+
